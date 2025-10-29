@@ -8,9 +8,7 @@
         git
         wofi
         neovim
-        hyfetch
         python314
-        fastfetch
         alacritty
         home-manager
     ];

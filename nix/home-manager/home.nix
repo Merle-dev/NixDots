@@ -63,10 +63,10 @@
             unzip
             kalker
 	        ffmpeg
+            hyfetch
             ripgrep
 	        arp-scan
-
-            obsidian
+            fastfetch
 
             clipse
             udisks
@@ -104,6 +104,7 @@
             heroic
 	        shotcut
             blender
+            obsidian
 	        gamemode
             surrealist
             pwvucontrol
