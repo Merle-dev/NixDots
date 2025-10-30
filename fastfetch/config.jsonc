@@ -101,7 +101,6 @@
     {
       "type": "battery",
       "key": "{#separator}│  {#keys} Battery",
-      "format": "{percentage} [{status}]"
     },
     {
       "type": "custom",

@@ -26,6 +26,13 @@
         username = "merle";
         homeDirectory = "/home/merle";
         stateVersion = "25.05";
+    
+        pointerCursor = {
+            name = "phinger-cursors-dark";
+            package = pkgs.phinger-cursors;
+            size = 32;
+            gtk.enable = true;
+        };
 
         packages = with pkgs; [
 
@@ -116,5 +123,4 @@
             xfce.thunar-archive-plugin
         ];
     };
-
 }
