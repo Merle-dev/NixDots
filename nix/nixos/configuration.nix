@@ -69,6 +69,7 @@
 
     services = {
         udisks2.enable = true;
+        blueman.enable = true;
         displayManager.ly = {
             enable = true;
             settings = {
@@ -104,7 +105,13 @@
         };
     };
 
-    hardware.graphics.enable = true;
+    hardware = {
+        graphics.enable = true;
+        bluetooth = {
+            enable = true;
+            powerOnBoot = true;
+        };
+    };
 
     system.stateVersion = "25.05";
 }

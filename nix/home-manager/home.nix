@@ -40,6 +40,7 @@
             niri
             xclip
             swaybg
+            waybar
             xwayland
             swaylock
             cliphist
@@ -71,6 +72,7 @@
             kalker
 	        ffmpeg
             hyfetch
+	        pamixer
             ripgrep
 	        arp-scan
             fastfetch
