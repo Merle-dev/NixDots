@@ -7,17 +7,18 @@
     "custom/power",
     "custom/reboot",
     "custom/lock",
-    "niri/workspaces"
+    "niri/workspaces",
+    "niri/window",
   ],
-  "modules-center": ["niri/window"],
+  "modules-center": [
+    "custom/waybar-mpris",
+  ],
   "modules-right": [
     "tray",
     "battery",
     "network",
     "bluetooth",
     "pulseaudio",
-    "memory",
-    "cpu",
     "clock"
   ],
   "custom/lock": {
@@ -34,7 +35,7 @@
   },
   "network": {
     "format-wifi": "<span color='#00FFFF'> 󰤨 </span>{essid} ",
-    "format-ethernet": "<span color='#7FFF00'> </span>Wired ",
+    "format-ethernet": "<span color='#7FFF00'>   </span>Wired ",
     "tooltip-format": "<span color='#FF1493'> 󰅧 </span>{bandwidthUpBytes}  <span color='#00BFFF'> 󰅢 </span>{bandwidthDownBytes}",
     "format-linked": "<span color='#FFA500'> 󱘖 </span>{ifname} (No IP) ",
     "format-disconnected": "<span color='#FF4040'>  </span>Disconnected ",
@@ -89,18 +90,6 @@
     "icon-size": 17,
     "spacing": 6
   },
-  "backlight": {
-    "device": "intel_backlight",
-    "format": "<span color='#FFD700'>{icon}</span>{percent}% ",
-    "tooltip": true,
-    "tooltip-format": "当前屏幕亮度: {percent}%",
-    "format-icons": [
-      "<span color='#696969'> 󰃞 </span>",  // 暗 - 深灰
-      "<span color='#A9A9A9'> 󰃝 </span>",  // 中 - 灰
-      "<span color='#FFFF66'> 󰃟 </span>",  // 亮 - 柠檬黄
-      "<span color='#FFD700'> 󰃠 </span>"   // 最亮 - 金色
-    ]
-  },
   "bluetooth": {
     "format": "<span color='#00BFFF'>  </span>{status} ",
     "format-connected": "<span color='#00BFFF'>  </span>{device_alias} ",
@@ -109,6 +98,13 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
-  }
+  },
+  "custom/waybar-mpris": {
+    "return-type": "json",
+    "exec": "waybar-mpris --play  --pause  --position --autofocus --separator \": \"",
+    "on-click": "waybar-mpris --send toggle",
+    "on-click-right": "waybar-mpris --send player-next",
+    "escape": true,
+  },
 }
 

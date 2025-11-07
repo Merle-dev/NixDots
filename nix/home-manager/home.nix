@@ -38,6 +38,8 @@
 
             # Window-Manager
             niri
+            rofi
+            swww # will be changed into awww when it releases
             xclip
             swaybg
             waybar
@@ -45,10 +47,12 @@
             swaylock
             cliphist
             nwg-look
+            pscircle
             hypridle
             hyprshot
             hyprpaper
             xdg-utils
+            waybar-mpris
             wl-clipboard-rs
             hyprpolkitagent
             phinger-cursors

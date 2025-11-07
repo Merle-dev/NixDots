@@ -27,6 +27,7 @@
 }
 
 #workspaces,
+#custom-waybar-mpris,
 #tray {
   padding: 2px 5px;
 }
@@ -42,6 +43,7 @@
 }
 
 #battery,
+#network,
 #custom-power {
   background-color: #303030;
   margin-top: 1px;
@@ -53,7 +55,6 @@
 
 #custom-reboot,
 #bluetooth,
-#network,
 #pulseaudio,
 #backlight,
 #custom-temperature,
