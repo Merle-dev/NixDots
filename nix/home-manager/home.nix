@@ -71,6 +71,7 @@
             cava
             btop
 	        nmap
+	        emacs
             helix
             unzip
             kalker
@@ -80,6 +81,7 @@
             ripgrep
 	        arp-scan
             fastfetch
+            cargo-binstall
 
             clipse
             udisks
@@ -104,6 +106,7 @@
             pyright
             surrealdb
             crates-tui
+            jdt-language-server
             lua-language-server
             haskell-language-server
             vimPlugins.telescope-nvim
