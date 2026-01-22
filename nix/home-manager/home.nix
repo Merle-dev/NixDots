@@ -37,7 +37,6 @@
         packages = with pkgs; [
 
             # Window-Manager
-            niri
             rofi
             swww # will be changed into awww when it releases
             xclip
@@ -60,26 +59,27 @@
             swaynotificationcenter
 
             # Utils
-	        kitty
+            kitty
             fuzzel
             wleave
 
             # Cli
-	        jq
+            jq
             eza
             bat
             cava
             btop
-	        nmap
-	        emacs
+            nmap
+            emacs
             helix
             unzip
             kalker
-	        ffmpeg
+            ffmpeg
             hyfetch
-	        pamixer
+            pamixer
             ripgrep
-	        arp-scan
+            pciutils
+            arp-scan
             fastfetch
             cargo-binstall
 
@@ -93,12 +93,16 @@
 
 
             # Programming
-	        jdk
+            gdb
+            jdk
             bun
             lua
-	        ghc
+            ghc
             nasm
+            rustc
+            clang
             manim
+            bacon
             gopls
             gitui
             sassc
@@ -106,22 +110,27 @@
             pyright
             surrealdb
             crates-tui
+            tokio-console
             jdt-language-server
             lua-language-server
             haskell-language-server
             vimPlugins.telescope-nvim
             typescript-language-server
-	        jetbrains.idea-community-bin
+            # jetbrains.idea
+            jetbrains.rust-rover
 
             # Programs
-	        reco
+            reco
+            gimp
             coppwr
-	        parted
+            parted
+            steam
             heroic
-	        shotcut
+            lutris
+            shotcut
             blender
             obsidian
-	        gamemode
+            gamemode
             surrealist
             pwvucontrol
             prismlauncher
@@ -130,6 +139,7 @@
             xfce.thunar
             xfce.thunar-volman
             xfce.thunar-archive-plugin
+
         ];
     };
 }

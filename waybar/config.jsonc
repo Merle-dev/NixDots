@@ -4,9 +4,9 @@
   "height": 20,
   "spacing": 0,
   "modules-left": [
-    "custom/power",
-    "custom/reboot",
-    "custom/lock",
+    // "custom/power",
+    // "custom/reboot",
+    // "custom/lock",
     "niri/workspaces",
     "niri/window",
   ],

@@ -17,7 +17,11 @@
             efi.canTouchEfiVariables = true;
         };
 
+        initrd.kernelModules = [ "amdgpu" ];
         kernelPackages = pkgs.linuxPackages_latest;
+        kernelParams = [ 
+            "amdgpu.sg_display=0"      # Important: Fixes the visual artifacts
+        ];
     };
 
     nix = let flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs; in 
@@ -34,7 +38,7 @@
 
     networking = {
         hostName = "nixos";
-        firewall.allowedTCPPorts = [ 8080 ];
+        firewall.allowedTCPPorts = [ 5520 ];
         networkmanager.enable = true;
     };
 
@@ -70,6 +74,7 @@
     services = {
         udisks2.enable = true;
         blueman.enable = true;
+        flatpak.enable = true;
         displayManager.ly = {
             enable = true;
             settings = {
@@ -86,6 +91,8 @@
                 options = "caps:none";
             };
         };
+        tailscale.enable = true;
+        logmein-hamachi.enable = true;
         openssh = {
             enable = true;
             settings = {
@@ -96,9 +103,9 @@
     };
 
     programs = {
-        niri.enable = true;
         fish.enable = true;
         hyprland.enable = true;
+        niri.enable = true;
         steam = {
             enable = true;
             extraCompatPackages = [ pkgs.proton-ge-bin ];
@@ -106,12 +113,16 @@
     };
 
     hardware = {
-        graphics.enable = true;
+        enableRedistributableFirmware = true;
+        graphics = { 
+            enable = true;
+            enable32Bit = true;
+        };
         bluetooth = {
             enable = true;
             powerOnBoot = true;
         };
     };
 
-    system.stateVersion = "25.05";
+    system.stateVersion = "25.11";
 }
