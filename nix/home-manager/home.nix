@@ -71,7 +71,6 @@
             btop
             nmap
             emacs
-            helix
             unzip
             kalker
             ffmpeg
@@ -81,6 +80,7 @@
             pciutils
             arp-scan
             fastfetch
+            astroterm
             cargo-binstall
 
             clipse
@@ -98,6 +98,8 @@
             bun
             lua
             ghc
+            mold
+            lldb
             nasm
             rustc
             clang
@@ -124,6 +126,7 @@
             gimp
             coppwr
             parted
+            mixxx
             steam
             heroic
             lutris

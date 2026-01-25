@@ -9,9 +9,9 @@ bufferline = "multiple"
 jump-label-alphabet = "abcdefghijklmnopqrstuvwxyzöüä"
 
 [editor.statusline]
-left = ["mode", "spinner"]
+left = ["mode", "spinner", "spacer", "version-control" ]
 center = ["file-name"]
-right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+right = ["diagnostics", "position", "total-line-numbers", "spacer", "register", "file-type"]
 separator = "│"
 mode.normal = "NORMAL"
 mode.insert = "INSERT"
@@ -28,7 +28,7 @@ select = "underline"
 hidden = false
 
 [editor.auto-pairs]
-'(' = ')'
+# '(' = ')'
 '{' = '}'
 '[' = ']'
 '"' = '"'
@@ -40,11 +40,11 @@ hidden = false
 Y = "yank_to_clipboard"
 L = "extend_to_line_bounds"
 "A-d" = "no_op"
-C = "toggle_comments"
 r = "change_selection"
 "%" = "no_op"
 "$" = "select_all"
 "K" = "hover"
+# "C-l" = "code_lens"
 V = ["extend_to_line_start", "select_mode"]
 w = ["move_next_word_start", "collapse_selection"]
 e = ["move_next_word_end", "collapse_selection"]
@@ -74,18 +74,13 @@ c = "changed_file_picker"
 Y = "yank_to_clipboard"
 L = "extend_to_line_bounds"
 "A-d" = "no_op"
-C = "toggle_comments"
+# C = "toggle_comments"
+# "Ctrl-c" = "copy_selection_on_next_line"
 r = "change_selection"
 "%" = "no_op"
 "$" = "select_all"
 "K" = "hover"
 V = ["extend_to_line_start", "select_mode"]
-w = ["move_next_word_start", "collapse_selection"]
-e = ["move_next_word_end", "collapse_selection"]
-b = ["move_prev_word_start", "collapse_selection"]
-W = ["move_next_long_word_start", "collapse_selection"]
-E = ["move_next_long_word_end", "collapse_selection"]
-B = ["move_prev_long_word_start", "collapse_selection"]
 
 [keys.select.space]
 "/" = "no_op"

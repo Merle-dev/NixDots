@@ -15,10 +15,15 @@
             url = "github:0xc000022070/zen-browser-flake";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        helix = {
+            url = "github:merle-dev/helix";
+            inputs.nixpkgs.follows = "nixpkgs";      
+        };
     };
 
     outputs = {
         self,
+        helix,
         nixpkgs,
         home-manager,
         ...
@@ -30,8 +35,15 @@
     # Available through 'nixos-rebuild --flake .#nixos'
     nixosConfigurations."nixos" = 
         nixpkgs.lib.nixosSystem {
-            specialArgs = {inherit inputs system outputs;};
-            modules = [./nixos/configuration.nix];
+            specialArgs = {inherit inputs system outputs helix;};
+            modules = [
+                ./nixos/configuration.nix
+                ({ helix, ... }: {
+                    environment.systemPackages = [
+                        helix.packages.${pkgs.system}.default 
+                    ];
+                })
+            ];
     };
 
     # Available through 'home-manager --flake .#merle@nixos'
