@@ -19,6 +19,10 @@
             url = "github:merle-dev/helix";
             inputs.nixpkgs.follows = "nixpkgs";      
         };
+        cldr = {
+            url = "github:merle-dev/cldr";
+            inputs.nixpkgs.follows = "nixpkgs";      
+        };
     };
 
     outputs = {
@@ -26,6 +30,7 @@
         helix,
         nixpkgs,
         home-manager,
+        cldr,
         ...
     } @ inputs: let
         inherit (self) outputs;
@@ -50,12 +55,13 @@
     homeConfigurations = {
         "merle@nixos" = home-manager.lib.homeManagerConfiguration {
             pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-            extraSpecialArgs = {inherit inputs outputs;};
+            extraSpecialArgs = {inherit inputs outputs cldr;};
             modules = [
                 ./home-manager/home.nix
                 {
                     home.packages = [
                         inputs.hyprpanel.packages.x86_64-linux.default
+                        inputs.cldr.packages.x86_64-linux.default
                     ];
                 }
             ];

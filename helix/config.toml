@@ -8,6 +8,10 @@ cursorline = true
 bufferline = "multiple"
 jump-label-alphabet = "abcdefghijklmnopqrstuvwxyzöüä"
 
+[editor.lsp]
+display-inlay-hints = true
+inlay-hints-length-limit = 50
+
 [editor.statusline]
 left = ["mode", "spinner", "spacer", "version-control" ]
 center = ["file-name"]

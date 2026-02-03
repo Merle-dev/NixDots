@@ -69,6 +69,7 @@
             bat
             cava
             btop
+            tldr
             nmap
             emacs
             unzip
@@ -98,6 +99,10 @@
             bun
             lua
             ghc
+            zig
+            zls
+            nixd
+            nixfmt
             mold
             lldb
             nasm
@@ -118,10 +123,16 @@
             haskell-language-server
             vimPlugins.telescope-nvim
             typescript-language-server
+            vscode-json-languageserver
             # jetbrains.idea
             jetbrains.rust-rover
 
+            marksman
+            kdlfmt
+            tombi
+
             # Programs
+            eww
             reco
             gimp
             coppwr
@@ -134,6 +145,7 @@
             blender
             obsidian
             gamemode
+            gamescope
             surrealist
             pwvucontrol
             prismlauncher
