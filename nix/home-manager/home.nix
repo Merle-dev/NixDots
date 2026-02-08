@@ -1,12 +1,8 @@
 {
   inputs,
-  lib,
-  config,
   pkgs,
   ...
 }: {
-    imports = [ inputs.zen-browser.homeModules.twilight ];
-
     nixpkgs = {
         overlays = [];
         config = {
@@ -18,14 +14,13 @@
     systemd.user.startServices = "sd-switch";
     
     programs = { 
-        zen-browser.enable = true;
         home-manager.enable = true;
     };
 
     home = {
         username = "merle";
         homeDirectory = "/home/merle";
-        stateVersion = "25.05";
+        stateVersion = "25.11";
     
         pointerCursor = {
             name = "phinger-cursors-dark";
@@ -34,7 +29,13 @@
             gtk.enable = true;
         };
 
+
         packages = with pkgs; [
+
+            inputs.helix.packages.${pkgs.system}.default
+            inputs.zen-browser.packages.${pkgs.system}.default
+            inputs.cldr.packages.${pkgs.system}.default
+            inputs.cpx.packages.${pkgs.system}.default
 
             # Window-Manager
             rofi
@@ -71,9 +72,11 @@
             btop
             tldr
             nmap
+            file
             emacs
             unzip
             kalker
+            direnv
             ffmpeg
             hyfetch
             pamixer

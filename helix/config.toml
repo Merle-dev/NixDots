@@ -1,6 +1,7 @@
 theme = "tokyo"
 
 [editor]
+idle-timeout = 1000
 line-number = "relative"
 mouse = false
 shell = ["fish", "-c" ]

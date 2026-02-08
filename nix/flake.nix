@@ -1,5 +1,5 @@
 {
-    description = "Merles nix config";
+    description = "Merles NixOS config";
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
@@ -7,12 +7,12 @@
             url = "github:nix-community/home-manager/release-25.11";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        hyprpanel = {
-            url = "github:Jas-SinghFSU/HyprPanel";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
         zen-browser = {
             url = "github:0xc000022070/zen-browser-flake";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        noctalia = {
+            url = "github:noctalia-dev/noctalia-shell";
             inputs.nixpkgs.follows = "nixpkgs";
         };
         helix = {
@@ -23,48 +23,42 @@
             url = "github:merle-dev/cldr";
             inputs.nixpkgs.follows = "nixpkgs";      
         };
+        cpx = {
+            url = "github:merle-dev/cpx";
+            inputs.nixpkgs.follows = "nixpkgs";      
+        };
     };
 
     outputs = {
         self,
-        helix,
         nixpkgs,
         home-manager,
-        cldr,
         ...
     } @ inputs: let
         inherit (self) outputs;
         system = "x86_64-linux";
         pkgs = nixpkgs.legacyPackages.${system};
     in {
-    # Available through 'nixos-rebuild --flake .#nixos'
+    # Available through 'nixos-rebuild --flake ./path/to/#nixos'
     nixosConfigurations."nixos" = 
         nixpkgs.lib.nixosSystem {
-            specialArgs = {inherit inputs system outputs helix;};
+            specialArgs = {inherit inputs system outputs;};
             modules = [
                 ./nixos/configuration.nix
-                ({ helix, ... }: {
+                ({ inputs, ... }: {
                     environment.systemPackages = [
-                        helix.packages.${pkgs.system}.default 
+                        inputs.helix.packages.${pkgs.system}.default 
                     ];
                 })
             ];
     };
 
-    # Available through 'home-manager --flake .#merle@nixos'
+    # Available through 'home-manager --flake ./path/to/#merle@nixos'
     homeConfigurations = {
         "merle@nixos" = home-manager.lib.homeManagerConfiguration {
-            pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-            extraSpecialArgs = {inherit inputs outputs cldr;};
-            modules = [
-                ./home-manager/home.nix
-                {
-                    home.packages = [
-                        inputs.hyprpanel.packages.x86_64-linux.default
-                        inputs.cldr.packages.x86_64-linux.default
-                    ];
-                }
-            ];
+            inherit pkgs;
+            extraSpecialArgs = {inherit inputs outputs;};
+            modules = [ ./home-manager/home.nix ];
             };
         };
     };

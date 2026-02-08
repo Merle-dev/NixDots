@@ -19,9 +19,6 @@
 
         initrd.kernelModules = [ "amdgpu" ];
         kernelPackages = pkgs.linuxPackages_latest;
-        kernelParams = [ 
-            "amdgpu.sg_display=0"      # Important: Fixes the visual artifacts
-        ];
     };
 
     nix = let flakeInputs = lib.filterAttrs (_: lib.isType "flake") inputs; in 
@@ -49,7 +46,7 @@
             initialPassword = "1234";
             isNormalUser = true;
             openssh.authorizedKeys.keys = [];
-            extraGroups = ["wheel"];
+            extraGroups = ["wheel" "networkmanager" "docker"];
         };
     };
 
@@ -70,6 +67,10 @@
     };
 
     security.polkit.enable = true;
+    virtualisation.docker.rootless = {
+        enable = true;
+        setSocketVariable = true;
+    };
 
     services = {
         udisks2.enable = true;
@@ -92,7 +93,6 @@
             };
         };
         tailscale.enable = true;
-        logmein-hamachi.enable = true;
         openssh = {
             enable = true;
             settings = {
@@ -100,6 +100,7 @@
                 PasswordAuthentication = false;
             };
         };
+        tuned.enable = true;
     };
 
     programs = {
