@@ -3,6 +3,13 @@
   pkgs,
   ...
 }: {
+    gtk = {
+        enable = true;
+        iconTheme = {
+            name = "Tokyonight-Dark";
+            package = pkgs.tokyonight-gtk-theme;
+        };
+    };
     nixpkgs = {
         overlays = [];
         config = {
@@ -36,6 +43,7 @@
             inputs.zen-browser.packages.${pkgs.system}.default
             inputs.cldr.packages.${pkgs.system}.default
             inputs.cpx.packages.${pkgs.system}.default
+            inputs.noctalia.packages.${pkgs.system}.default
 
             # Window-Manager
             rofi
@@ -52,6 +60,7 @@
             hyprshot
             hyprpaper
             xdg-utils
+            quickshell
             waybar-mpris
             wl-clipboard-rs
             hyprpolkitagent
@@ -158,6 +167,8 @@
             xfce.thunar-volman
             xfce.thunar-archive-plugin
 
+            papirus-icon-theme
+            papirus-folders
         ];
     };
 }
