@@ -1,0 +1,92 @@
+[2026-02-02 07:57:44.553] [info]  [Main] [Main] +++ Starting +++
+[2026-02-02 07:57:45.237] [info]  [AppComponent] [ngOnInit] +++ Started Dopamine 3.0.0 +++
+[2026-02-02 07:57:45.256] [warn]  [DiscordApi] [clearPresence] Discord client is not ready. Cannot clear presence.
+[2026-02-02 07:57:45.258] [info]  [AppearanceService] [applyTheme] Applied theme name=Dopamine' and theme classes='default-theme-dark'
+[2026-02-02 07:57:45.269] [info]  [QueuePersister] [restore] Restoring queue
+[2026-02-02 07:57:45.275] [error] [QueuePersister] [restore]  Failed to restore queue. Error: no such table: QueuedTrack
+[2026-02-02 07:57:45.276] [info]  [Queue] [restoreTracks] Restored '0' tracks
+[2026-02-02 07:57:45.276] [info]  [DatabaseMigrator] [migrateAsync] Database is too old (v0). Applying migrations.
+[2026-02-02 07:57:45.277] [info]  [DatabaseMigrator] [getMigrationsAsync] Found migrations: Migration1,Migration2,Migration3,Migration4,Migration5,Migration6,Migration7
+[2026-02-02 07:57:45.277] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration1
+[2026-02-02 07:57:45.285] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration1 success
+[2026-02-02 07:57:45.285] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration2
+[2026-02-02 07:57:45.292] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration2 success
+[2026-02-02 07:57:45.292] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration3
+[2026-02-02 07:57:45.299] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration3 success
+[2026-02-02 07:57:45.299] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration4
+[2026-02-02 07:57:45.306] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration4 success
+[2026-02-02 07:57:45.306] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration5
+[2026-02-02 07:57:45.313] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration5 success
+[2026-02-02 07:57:45.313] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration6
+[2026-02-02 07:57:45.320] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration6 success
+[2026-02-02 07:57:45.320] [info]  [DatabaseMigrator] [migrateAsync] Applying migration Migration7
+[2026-02-02 07:57:45.327] [info]  [DatabaseMigrator] [migrateAsync] Migration Migration7 success
+[2026-02-02 07:58:14.405] [info]  [FolderService] [addNewFolderAsync] Added folder with path '/home/merle/Music/Dopamine/Playlists'
+[2026-02-02 07:58:29.490] [info]  [DatabaseMigrator] [migrateAsync] The database is up to date. No migrations to perform.
+[2026-02-02 07:58:29.491] [info]  [FileService] [getAllParameters] Parameters: /nix/store/mprv3h6m5a7nhfcqy4cmkd8d19slxbhf-dopamine-3.0.0-extracted/dopamine
+[2026-02-02 07:58:29.492] [info]  [FileService] [getAllParameters] File queue: 
+[2026-02-02 07:58:29.492] [info]  [FileService] [hasPlayableFilesAsGivenParameters] Found parameters: /nix/store/mprv3h6m5a7nhfcqy4cmkd8d19slxbhf-dopamine-3.0.0-extracted/dopamine
+[2026-02-02 07:58:29.520] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 0 ms
+[2026-02-02 07:58:29.521] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2026-02-02 07:58:29.521] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2026-02-02 07:58:29.522] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2026-02-02 07:58:29.522] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2026-02-02 07:58:29.523] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2026-02-02 07:58:30.071] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 1 ms
+[2026-02-02 07:58:30.071] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 0 ms
+[2026-02-02 07:58:30.072] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 0 ms
+[2026-02-02 07:58:30.123] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 1 ms
+[2026-02-02 07:58:30.123] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2026-02-02 07:58:30.174] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 1 ms
+[2026-02-02 07:58:30.175] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2026-02-02 07:58:30.175] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2026-02-02 07:58:31.502] [info]  [IndexingService] [indexCollection] Indexing collection.
+[2026-02-02 07:58:31.503] [info]  [UpdateService] [checkForUpdatesAsync] Checking for updates
+[2026-02-02 07:58:31.616] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Indexing collection.
+[2026-02-02 07:58:31.623] [info]  [CollectionChecker] [isCollectionOutdatedAsync] Collection is up to date
+[2026-02-02 07:58:31.624] [info]  [Indexer] [indexCollectionIfOutdatedAsync] Collection is not outdated.
+[2026-02-02 07:58:31.629] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ STARTED INDEXING ALBUM ARTWORK +++
+[2026-02-02 07:58:31.630] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatHasNoTrackAsync] There is no album artwork to remove. Time required: 1 ms.
+[2026-02-02 07:58:31.630] [info]  [AlbumArtworkRemover] [removeAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] There is no album artwork to remove. Time required: 0 ms.
+[2026-02-02 07:58:31.631] [info]  [AlbumArtworkAdder] [addAlbumArtworkForTracksThatNeedAlbumArtworkIndexingAsync] Found no album data that needs indexing
+[2026-02-02 07:58:31.632] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 0 album artwork in the database
+[2026-02-02 07:58:31.632] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 0 artworkIds in the database
+[2026-02-02 07:58:31.633] [info]  [AlbumArtworkRemover] [removeAlbumArtworkThatIsNotInTheDatabaseFromDiskAsync] Found 0 artwork files on disk
+[2026-02-02 07:58:31.633] [info]  [AlbumArtworkIndexer] [indexAlbumArtworkAsync] +++ FINISHED INDEXING ALBUM ARTWORK (Time required: 4 ms) +++
+[2026-02-02 07:58:31.924] [info]  [UpdateService] [checkForUpdatesAsync] Current=3.0.0, Latest=3.0.0-preview.40
+[2026-02-02 07:58:31.924] [info]  [UpdateService] [checkForUpdatesAsync] Latest (3.0.0-preview.40) <= Current (3.0.0). Nothing to do.
+[2026-02-02 07:58:32.184] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 0 ms
+[2026-02-02 07:58:32.185] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 0 ms
+[2026-02-02 07:58:32.203] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 0 ms
+[2026-02-02 07:58:32.236] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 1 ms
+[2026-02-02 07:58:32.237] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 1 ms
+[2026-02-02 07:58:32.287] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 1 ms
+[2026-02-02 07:58:32.288] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2026-02-02 07:58:32.288] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2026-02-02 07:58:47.789] [info]  [GenreBrowserComponent] [orderGenres] Finished ordering genres. Time required: 0 ms
+[2026-02-02 07:58:47.790] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2026-02-02 07:58:47.790] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2026-02-02 07:58:47.790] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2026-02-02 07:58:47.791] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2026-02-02 07:58:47.791] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2026-02-02 07:58:48.340] [info]  [GenreService] [getGenres] Finished getting genres. Time required: 1 ms
+[2026-02-02 07:58:48.340] [info]  [GenreBrowserComponent] [orderGenres] Finished ordering genres. Time required: 0 ms
+[2026-02-02 07:58:48.391] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 1 ms
+[2026-02-02 07:58:48.392] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2026-02-02 07:58:48.443] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 1 ms
+[2026-02-02 07:58:48.443] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2026-02-02 07:58:48.444] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2026-02-02 07:58:48.874] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 0 ms
+[2026-02-02 07:58:48.875] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2026-02-02 07:58:48.875] [info]  [TrackSorter] [sortByTitleAscending] Finished sorting tracks by title ascending. Time required: 0 ms
+[2026-02-02 07:58:48.876] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
+[2026-02-02 07:58:48.876] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2026-02-02 07:58:48.876] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 0 ms
+[2026-02-02 07:58:49.425] [info]  [ArtistService] [getArtists] Finished getting artists. Time required: 1 ms
+[2026-02-02 07:58:49.426] [info]  [ArtistService] [getArtists] Finished splitting artists. Time required: 1 ms
+[2026-02-02 07:58:49.426] [info]  [ArtistBrowserComponent] [orderArtists] Finished ordering artists. Time required: 0 ms
+[2026-02-02 07:58:49.477] [info]  [AlbumService] [getAllAlbums] Finished getting all albums. Time required: 1 ms
+[2026-02-02 07:58:49.478] [info]  [AlbumBrowserComponent] [orderAlbums] Finished ordering albums. Time required: 0 ms
+[2026-02-02 07:58:49.528] [info]  [TrackService] [getVisibleTracks] Finished getting visible tracks. Time required: 1 ms
+[2026-02-02 07:58:49.528] [info]  [TrackSorter] [sortByAlbum] Finished sorting tracks by album. Time required: 0 ms
+[2026-02-02 07:58:49.529] [info]  [TrackBrowserComponent] [orderTracks] Finished ordering tracks. Time required: 1 ms
